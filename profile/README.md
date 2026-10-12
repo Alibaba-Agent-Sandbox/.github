@@ -4,51 +4,35 @@
 
 </div>
 
-## 📦 Repositories
+## Repositories
 
 | Repository | Description |
 |:--|:--|
-| [`serverless-sandbox`](https://github.com/serverless-sandbox/serverless-sandbox) | Core SDK & CLI — sandbox lifecycle, file I/O, code execution, agent tools, and more. |
-| [`awesome-templates`](https://github.com/serverless-sandbox/awesome-templates) | Community-curated sandbox templates — Python, Node.js, data science, code interpreters. |
+| [`easy-sandbox`](https://github.com/Easy-Sandbox/easy-sandbox) | The `ebx` CLI. Create and manage sandboxes, providers, and templates. |
+| [`python-sdk`](https://github.com/Easy-Sandbox/python-sdk) | Python client SDK (`easy-sandbox`) and the in-sandbox server (`easy-sandbox-server`). |
+| [`awesome-templates`](https://github.com/Easy-Sandbox/awesome-templates) | Community sandbox templates. |
 
-## 🚀 Quick Start
+## Quick start
+
+Install the CLI (Node.js 20 or newer):
 
 ```bash
-pip install easy-sandbox[all]
+npm install -g @easy-sandbox/cli
+ebx --version
+```
+
+Or use the Python SDK:
+
+```bash
+pip install easy-sandbox
 ```
 
 ```python
 from easy_sandbox import Sandbox
 
-# 创建沙箱（推荐使用 async with 自动管理生命周期）
-async with await Sandbox.create(template="base", api_key="...") as sandbox:
-
-    # 执行命令
+async with await Sandbox.create(template="base") as sandbox:
     result = await sandbox.commands.run("echo hello")
     print(result.stdout, result.exit_code)
-
-    # 文件操作
-    await sandbox.files.write("/app/data.txt", "内容")
-    content = await sandbox.files.read("/app/data.txt")
-
-    # 执行代码
-    code_result = await sandbox.run_code("print(1 + 1)")
-    print(code_result.text)
-
-    # 端口访问
-    url = sandbox.network.get_url(3000)
 ```
 
-```python
-# @sandbox 装饰器 — 声明式远程执行
-from easy_sandbox.declarative import sandbox
-
-@sandbox(template="code-interpreter", packages=["numpy"])
-def compute(n: int) -> float:
-    import numpy as np
-    return float(np.random.random(n).mean())
-
-result = compute(1000)  # 自动在远程沙箱中执行
-```
-
-> Need the CLI? `pip install "serverless-sandbox[cli]"` — then run `sbox create --template python-base`.
+Credentials go in `ebx config` or `E2B_API_KEY`. Do not commit them.
