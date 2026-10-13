@@ -1,0 +1,23 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question
+    url: https://github.com/alibaba-agent-sandbox/agent-sandbox/discussions/categories/q-a
+    about: Questions about the abx CLI and Agent Sandbox
+  - name: Suggest an idea
+    url: https://github.com/alibaba-agent-sandbox/agent-sandbox/discussions/categories/ideas
+    about: Ideas for new features
+  - name: CLI issues
+    url: https://github.com/alibaba-agent-sandbox/agent-sandbox/issues/new/choose
+    about: The abx CLI lives in the agent-sandbox repository
+  - name: Python SDK issues
+    url: https://github.com/alibaba-agent-sandbox/python-sdk/issues/new/choose
+    about: The Python client and in-sandbox server live in python-sdk
+  - name: Node.js SDK issues
+    url: https://github.com/alibaba-agent-sandbox/nodejs-sdk/issues/new/choose
+    about: The Node.js SDK lives in nodejs-sdk
+  - name: Community templates
+    url: https://github.com/alibaba-agent-sandbox/awesome-templates
+    about: Browse and contribute sandbox templates
+  - name: Provider plugins
+    url: https://github.com/alibaba-agent-sandbox/awesome-providers
+    about: Installable sandbox providers
