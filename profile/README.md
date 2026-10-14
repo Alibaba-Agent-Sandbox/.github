@@ -15,6 +15,14 @@ Cloud sandboxes for AI agents: create an isolated environment, run commands in i
 | [`nodejs-sdk`](https://github.com/alibaba-agent-sandbox/nodejs-sdk) | Node.js SDK (`@agent-sandbox/sdk`). |
 | [`awesome-templates`](https://github.com/alibaba-agent-sandbox/awesome-templates) | Sandbox template catalog. |
 | [`awesome-providers`](https://github.com/alibaba-agent-sandbox/awesome-providers) | Installable sandbox provider plugins. |
+| [`blogs`](https://github.com/alibaba-agent-sandbox/blogs) | Product notes and release write-ups. |
+
+## Sites
+
+| Site | URL |
+|:--|:--|
+| Official site | https://www.agent-sandbox.cn |
+| Template and provider registry | https://registry.agent-sandbox.cn |
 
 ## Install
 
@@ -42,5 +50,6 @@ abx exec <sandbox-id> -- echo hello
 | Node.js SDK | [README](https://github.com/alibaba-agent-sandbox/nodejs-sdk/blob/main/README.md) |
 | Templates | [README](https://github.com/alibaba-agent-sandbox/awesome-templates/blob/main/README.md) |
 | Providers | [authoring](https://github.com/alibaba-agent-sandbox/awesome-providers/blob/main/docs/authoring.md) |
+| Blog | [README](https://github.com/alibaba-agent-sandbox/blogs/blob/main/README.md) |
 
 Index pages: [CLI docs](https://github.com/alibaba-agent-sandbox/agent-sandbox/blob/main/docs/README.md), [Python SDK docs](https://github.com/alibaba-agent-sandbox/python-sdk/blob/main/docs/README.md).
