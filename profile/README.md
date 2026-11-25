@@ -2,7 +2,7 @@
 
 **Agent Sandbox**
 
-Cloud sandboxes for AI agents: create an isolated environment, run commands in it, and tear it down from the `abx` CLI or the Python and Node.js SDKs.
+Cloud sandboxes for AI agents: create an isolated environment, run commands in it, and tear it down from the `abx` CLI or the Python SDK. The Node.js SDK connects to application services in running sandboxes.
 
 </div>
 
@@ -11,7 +11,7 @@ Cloud sandboxes for AI agents: create an isolated environment, run commands in i
 | Repository | What it is |
 |:--|:--|
 | [`agent-sandbox`](https://github.com/alibaba-agent-sandbox/agent-sandbox) | The `abx` CLI (`npm install -g @agent-sandbox/cli`). |
-| [`python-sdk`](https://github.com/alibaba-agent-sandbox/python-sdk) | Python packages `agent-sandbox` (`agent_sandbox`) and `agent-sandbox-server` (`agent_sandbox.server`). |
+| [`python-sdk`](https://github.com/alibaba-agent-sandbox/python-sdk) | Python packages `agent-sandbox-client` (`agent_sandbox`) and `agent-sandbox-server` (`agent_sandbox.server`). |
 | [`nodejs-sdk`](https://github.com/alibaba-agent-sandbox/nodejs-sdk) | Node.js SDK (`@agent-sandbox/sdk`). |
 | [`awesome-templates`](https://github.com/alibaba-agent-sandbox/awesome-templates) | Sandbox template catalog. |
 | [`awesome-providers`](https://github.com/alibaba-agent-sandbox/awesome-providers) | Installable sandbox provider plugins. |
@@ -27,14 +27,16 @@ Cloud sandboxes for AI agents: create an isolated environment, run commands in i
 ## Install
 
 ```bash
-npm install -g @agent-sandbox/cli
-pip install agent-sandbox
+npm install -g @agent-sandbox/cli@0.5.10
+python -m pip install --pre agent-sandbox-client
 ```
 
 ## Quick start
 
+This example uses the published CLI 0.5.10. For the current source commands, see the [CLI guide](https://github.com/Alibaba-Agent-Sandbox/agent-sandbox/blob/main/docs/en/guide/getting-started.md).
+
 ```bash
-npm install -g @agent-sandbox/cli
+npm install -g @agent-sandbox/cli@0.5.10
 abx config init
 abx create --template base
 abx list
